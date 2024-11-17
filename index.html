@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- main font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font h1 code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- font h2 code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- web icon -->
+     <link rel="shortcut icon" href="images/2899445.png" type="image/x-icon">
+    <title>BookMark</title>
+    <!-- bootstrap -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <!-- fontawesome -->
+      <link rel="stylesheet" href="css/all.min.css">
+      <!-- main css -->
+       <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="m-auto">Bookmarker</h1>
+        <div class="br my-5"></div>
+        <h2 class="m-auto text-center"><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+        <div class="mb-3 mt-5">
+            <label for="sitename" class="form-label fw-semibold"><i class="fa-solid fa-book-bookmark me-2"></i> Site Name</label>
+            <input oninput="validateinputs(this)" type="text" class="form-control" id="sitename" placeholder="Bookmark Name">
+            <div class="alert alert-danger p-2 mt-2 d-none">
+                Site name must contain at least 3 characters
+            </div>
+          </div>
+        <div class="mb-3">
+            <label for="siteurl" class="form-label fw-semibold"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input oninput="validateinputs(this)" type="text" class="form-control" id="siteurl" placeholder="Website URL">
+            <div class="alert alert-danger p-2 mt-2 d-none">
+                Site URL must be a valid one(should be https://example.com)
+            </div>
+          </div>
+          <button type="button" class=" btn px-5 position-relative start-50 translate-middle-x" onclick="addSite()" id="Submit">Submit</button>
+          <div class="br mt-5"></div>
+    </div>
+    <div class="container mt-4">
+        <div class="row bg-light text-center fw-bold align-items-center justify-content-center py-2">
+        <div class="col-3">Index</div>
+        <div class="col-3">Website Name</div>
+        <div class="col-3">Visit</div>
+        <div class="col-3">Delete</div>
+        </div>
+       </div>
+       <div class="container mt-1" id="sitedata">
+
+       </div>
+ 
+       <!-- bootstrap js -->
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <!-- sweetalert link -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <!-- main js -->
+     <script src="js/index.js"></script>
+</body>
+</html>
+
+
