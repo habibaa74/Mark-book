@@ -70,8 +70,8 @@ function deletesite(index){
 // regex
 function validateinputs(element){
    var regex={
-    sitename:/^[a-z]{3,}$/i,
-    siteurl:/^https?:\/\/\w{3,}.com$/gm
+    sitename:/^[a-z ]{3,}$/i,
+    siteurl:/^https?:\/\/\w{3,}.com$/igm
    }
    if(regex[element.id].test(element.value)==true){
     element.classList.add("is-valid")
