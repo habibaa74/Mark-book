@@ -54,6 +54,8 @@ else{
         text:`Site name must contain at least 3 characters and Site URL must be a valid one`,
       });
 } 
+siteNameInput.classList.remove("is-valid")
+siteUrlInput.classList.remove("is-valid")
 }
 // clear data
 function clear(){
@@ -71,7 +73,7 @@ function deletesite(index){
 function validateinputs(element){
    var regex={
     sitename:/^[a-z ]{3,}$/i,
-    siteurl:/^https?:\/\/\w{3,}.com$/igm
+    siteurl:/^https:\/\/(www.|)\w{3,}.com$/i,
    }
    if(regex[element.id].test(element.value)==true){
     element.classList.add("is-valid")
